@@ -3,12 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
+title: colin OMG
+subtitle: 愈之的个人博客
 description:
-author: John Doe
-language:
+author: colin6618
+language: zh-cn
 timezone:
+
+# Social
+social:
+  github: colin6618
+
+# Header
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -63,7 +69,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: huno
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -91,3 +97,8 @@ markdown:
     permalink: true
     permalinkClass: header-anchor
     permalinkSymbol: ¶
+
+
+
+# Duoshuo
+duoshuo_shortname: letian
