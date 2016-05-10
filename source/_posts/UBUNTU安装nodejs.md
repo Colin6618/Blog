@@ -1,5 +1,5 @@
 ---
-title: Ubuntu上安装nodejs
+title: Ubuntu上安装Nodejs
 date: 2013-07-20 23:31:52
 tags:
 ---
@@ -21,6 +21,7 @@ curl https://npmjs.org/install.sh | sh
 ```
 保存好后运行就行了。
 开终端进入相应目录运行：sudo bash xxxx.sh
+
 
 如果遇到以下报错信息：
 make[1]: g++:命令未找到
