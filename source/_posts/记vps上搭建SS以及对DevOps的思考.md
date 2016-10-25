@@ -1,5 +1,5 @@
 ---
-title:记vps上搭建SS和blog以及对DevOps的思考
+title: 记vps上搭建SS以及对DevOps的思考
 date: 2016-07-19 17:58:56
 tags: 运维 博客
 ---
@@ -7,16 +7,15 @@ tags: 运维 博客
 ![jj](http://img4.imgtn.bdimg.com/it/u=4067514976,2212248928&fm=15&gp=0.jpg)
 
 
-由于国内的阿里云ECS服务器到期，续费价格又过于高昂，一个月花几百块在一台国内的流量很有限的服务器上怎么算都划不来。同样的价格买国外的VPS划算的多，乘着搬瓦工20刀年费的vps又开放购买了就入了一个。本文主要记录一下，在[bandwagonhost](https://bandwagonhost.com)上搭建SS和个人博客的注意事项。
+由于国内的阿里云ECS服务器到期，续费价格又过于高昂，一个月花几百块在一台国内的流量很有限的服务器上怎么算都划不来。同样的价格买国外的VPS划算的多，乘着搬瓦工20刀年费的vps又开放购买了就入了一个。本文主要记录一下，在[bandwagonhost](https://bandwagonhost.com)上搭建SS的注意事项。
 
-主要针对这家kiwiVM构架的VPS来说。
-
+主要针对这家kiwiVM构架的VPS来说，需要注意这三点
 
 1. [远程SSH登陆是肯定需要的，但搬瓦工的VPS默认是禁止root用户登录的](http://www.itbulu.com/linux-root-ssh.html)
 
 2. [配置nginx和反向代理](http://www.jianshu.com/p/605c3d32cab9)
 
-3. [开启防火墙http和https的通过许可]。(https://www.zybuluo.com/phper/note/90310)
+3. [开启防火墙http和https的通过许可](https://www.zybuluo.com/phper/note/90310)
 
 > 各种安装shadowsocks服务端代理的教程网上都能找到，但是遇到这些问题的时候还是需要自己去解决的。如果对Linux的命令和常见的网站构架熟悉的话，通过过curl本地端口，查看ssh和nginx的配置文件都能知道。
 > 对`systemctl`和`firewall-cmd`等命令不熟悉也很正常，必须google一下。
