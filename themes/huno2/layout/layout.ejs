@@ -34,7 +34,7 @@
     %>
 
     <title>
-      <%= title %> 
+      <%= title %>
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -46,7 +46,7 @@
     <% } %>
 
     <%- open_graph({title: title}) %>
-    
+
     <% if (theme.rss){ %>
       <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
     <% } %>
@@ -76,10 +76,10 @@
     </div>
 
     <!-- js files -->
-    <script src="<%- config.root %>js/jquery.min.js"></script>
+    <script src="<%- config.assets_cdn %>/jquery/1.8.3/jquery.min.js"></script>
     <script src="<%- config.root %>js/main.js"></script>
     <script src="<%- config.root %>js/scale.fix.js"></script>
-    
+
 
     <%- partial('_scripts/mathjax') %>
     <%- partial('_scripts/awesome-toc') %>

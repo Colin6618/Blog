@@ -18,10 +18,11 @@ social:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://casualg.com
+url: http://ali996.com
 root: /
 permalink: :year/:title/
 permalink_defaults:
+assets_cdn: https://cdn.bootcss.com
 
 # Directory
 source_dir: source
