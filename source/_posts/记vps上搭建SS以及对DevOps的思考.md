@@ -30,4 +30,4 @@ tags: 运维 博客
 
 [最后分享一篇漫画](http://blog.xiqiao.info/blogimg/programmers/56_Almighty_language.gif)
 
-题图：Docker的可爱鲸鱼
+题图：Docker的可爱鲸鱼。
