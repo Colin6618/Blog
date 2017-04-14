@@ -10,6 +10,12 @@ author: colin6618
 language: zh-cn
 timezone:
 
+# hexo sitemap网站地图
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+
 # Social
 social:
   github: http://colin6618.github.io/
