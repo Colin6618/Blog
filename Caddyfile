@@ -1,0 +1,10 @@
+ali996.com, www.ali996.com {
+
+    root public/
+    gzip
+    log /var/log/blog/access.log {
+	size 100
+        age 365
+        keep 10
+    }
+}

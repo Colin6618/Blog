@@ -3,12 +3,19 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: colin
-subtitle: 愈之的个人博客
-description:
+htmlTitle: colin - 愈之的个人博客
+title: 愈之 博客
+subtitle: Colin's Personal Blog
+description: 愈之 colin 思想 编程 WEB Programming 学习 工作 life 旅游 随笔 blog
 author: colin6618
 language: zh-cn
 timezone:
+
+# hexo sitemap网站地图
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
 
 # Social
 social:
