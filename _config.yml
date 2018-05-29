@@ -108,7 +108,8 @@ markdown:
     permalinkClass: header-anchor
     permalinkSymbol: ¶
 
-
+# google_analytics
+google_analytics: UA-43915292-2
 
 # Duoshuo
 duoshuo_shortname: casualg
