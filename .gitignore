@@ -4,5 +4,7 @@ db.json
 *.log
 node_modules/
 .deploy*/
+.deploy_git
 *.out
 public/
+
