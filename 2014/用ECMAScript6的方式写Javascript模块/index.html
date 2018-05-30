@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      colin - 愈之的个人博客
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="colin6618">
+    
+    
+
+    <meta name="description" content="¶用ECMAScript6的方式写Javascript模块
+¶简述
+   JavaScript的发展非常迅速，但不可否认Javascript有不少瑕疵，其中最显著的便是缺少语言自身的模块系系统(Module System)：将应用分割为一系列粒度更小的文件并且相互依赖执行的方式。
+   Ruby有require,Python有import，你熟悉的其他语言都能举出例子，甚至连CSS都有@impor">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用ECMAScript6的方式写Javascript模块 | 愈之 博客">
+<meta property="og:url" content="http://ali996.com/2014/用ECMAScript6的方式写Javascript模块/index.html">
+<meta property="og:site_name" content="愈之 博客">
+<meta property="og:description" content="¶用ECMAScript6的方式写Javascript模块
+¶简述
+   JavaScript的发展非常迅速，但不可否认Javascript有不少瑕疵，其中最显著的便是缺少语言自身的模块系系统(Module System)：将应用分割为一系列粒度更小的文件并且相互依赖执行的方式。
+   Ruby有require,Python有import，你熟悉的其他语言都能举出例子，甚至连CSS都有@impor">
+<meta property="og:updated_time" content="2018-05-30T02:13:03.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用ECMAScript6的方式写Javascript模块 | 愈之 博客">
+<meta name="twitter:description" content="¶用ECMAScript6的方式写Javascript模块
+¶简述
+   JavaScript的发展非常迅速，但不可否认Javascript有不少瑕疵，其中最显著的便是缺少语言自身的模块系系统(Module System)：将应用分割为一系列粒度更小的文件并且相互依赖执行的方式。
+   Ruby有require,Python有import，你熟悉的其他语言都能举出例子，甚至连CSS都有@impor">
+
+    
+    
+      <link rel="icon" type="image/x-icon" href="data:image/vnd.microsoft.icon;base64,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">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+    
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-43915292-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+    
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">愈之 博客</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          Colin&#39;s Personal Blog
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">About</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">Arch</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+    
+      <!-- Github -->
+      <li class="navigation__item">
+        <a href="http://colin6618.github.io/" title="Huno on GitHub">
+          <i class='icon icon-social-github'></i>
+          <span class="label">GitHub</span>
+        </a>
+      </li>
+    
+
+    <!-- China social icon -->
+    <!--
+
+      <li class="navigation__item">
+        <a href="" title="">
+          <i class='icon cs-icon-douban'></i>
+          <span class="label">Douban</span>
+        </a>
+      </li>
+
+      <li class="navigation__item">
+        <a href="" title="">
+          <i class='icon cs-icon-weibo'></i>
+          <span class="label">Weibo</span>
+        </a>
+      </li>
+
+    -->
+
+
+
+  </ul>
+</nav>
+
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">用ECMAScript6的方式写Javascript模块</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2014-12-04" class="post-meta__date date">2014-12-04</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/javascript/">javascript</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h2 id="用ecmascript6的方式写javascript模块"><a class="header-anchor" href="#用ecmascript6的方式写javascript模块">¶</a>用ECMAScript6的方式写Javascript模块</h2>
+<h3 id="简述"><a class="header-anchor" href="#简述">¶</a>简述</h3>
+<p>   JavaScript的发展非常迅速，但不可否认Javascript有不少瑕疵，其中最显著的便是缺少语言自身的模块系系统(Module System)：将应用分割为一系列粒度更小的文件并且相互依赖执行的方式。
+   Ruby有require,Python有import，你熟悉的其他语言都能举出例子，甚至连CSS都有@import！Javascript没有类似的关键字，开发者在开发小型web应用时还能任性一下，但是当面对一个大型应用的时候就得借助各种工具了。当然这不是意味着ES6的模块系统只能适用于小规模应用。庆幸的是，没有模块系统的Javascript很快就会成为过去时。下个版本的Javascript，也就是ECMAScript6，会带来一个功能全面的模块和依赖管理方案。虽然浏览器还不能在短时间内支持这个特性，但毕竟有关模块系统的规范标准已经定稿，支持已经是时间问题。现在已经有很多模块加载框架已经服役良久且在浏览器上运行的很好。本篇文章会对有关JS模块语法以及如何在使用做一些介绍。总之，一定比你想象的简单。</p>
+<h3 id="关于es6"><a class="header-anchor" href="#关于es6">¶</a>关于ES6</h3>
+<p>   ECMAScript是<a href="http://www.ecma-international.org/" target="_blank" rel="external">Ecma International</a>公司制定的脚本语言标准。Javascript是该标准的实现，ES6是下个版本的ECMAScript，因此也就是下个版本的Javascript。ES6规范会在2014年底完全确定下来，并目标在2015年6月发布（都定稿了还隔半年发布是几个意思？）。规范是定下来了，等现在流行的浏览器完全支持却遥遥无期，最新的Chrome和Firefox已经对ES6的一些特性提供支持。等标准公布，再等浏览器厂商都提供支持，恐怕要等的心塞，所以，现在就想用的话就必须借助一些工具和框架。</p>
+<h3 id="es6模块规范"><a class="header-anchor" href="#es6模块规范">¶</a>ES6模块规范</h3>
+<p>   ES6模块规范是在今年7月完全定稿，所以不用担心本文介绍的语法会变化。本文除了介绍语法还会顺带介绍一些语言新加的API和用法。JS新的模块系统分为两部分。第一部分是声明模块和依赖的语法，第二部分是手动加载模块的API。我们肯定会用到的是第一部分，这也是本文要着重介绍的。
+<br></p>
+<h4 id="模块语法"><a class="header-anchor" href="#模块语法">¶</a>模块语法</h4>
+<p>   理解模块语法的关键也分为两部分。首先模块间有依赖，也就是你在编写的模块或方法需要正常运行所依赖的。举个例子，你在用jQuery写一个图片轮播的模块，这时jQuery就是这个模块所依赖的模块。你需要import这些依赖到你的模块中。第二个，模块有exports，也就是对外声明的接口。还是举jQuery的例子，$就可以被认为是jQuery的exoprts，你的模块依能使用jQuery提供的$是因为jQuery提供了。
+   另外需要记住的是Javascript的每一个模块就是一个Javascript文件。</p>
+<br>
+#### Named exports
+<p>模块可以输出各种对象，可以是普通的对象，也可以是方法，使用<code>export</code>关键字来声明</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">double</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> x + x;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>也可以赋值之后再输出。如果这么做，你需要用一对大括号把变量包起来</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var double = function(x) &#123;</div><div class="line">  return x + x;</div><div class="line">&#125;</div><div class="line"></div><div class="line">export &#123; double &#125;;</div></pre></td></tr></table></figure>
+<p>可以像这样引入<code>double</code> 方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import &#123; double &#125; from &apos;mymodule&apos;;</div><div class="line">double(2); // 4</div></pre></td></tr></table></figure>
+<p>又见大括号，引入模块是要用到大括号的。注意<code>from ‘mymodule’</code>会在当前目录下寻找一个文件名为<code>mymodule.js</code>的文件，不需要写文件后缀。</p>
+<p>大括号可以包含多个变量。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var double = function(x) &#123;</div><div class="line">  return x + x;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var square = function(x) &#123;</div><div class="line">  return x * x;</div><div class="line">&#125;</div><div class="line"></div><div class="line">export &#123; double, square &#125;</div></pre></td></tr></table></figure>
+<p>一般情况下，<code>exprots {}</code>写在文件末尾。从可读性上考虑，写在文件末尾的话可以扫一眼就知道这个模块输出什么。</p>
+<p>和你预想的一样，引入多个方法是也是这么写的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">import &#123; double, square &#125; from &apos;mymodule&apos;;</div><div class="line">double(2); // 4</div><div class="line">square(3); // 9</div></pre></td></tr></table></figure>
+<p>有没有发现你不能很容易的把整个模块和所有的方法引进来。</p>
+<blockquote>
+<p>这是故意设计成这样的——鼓励使用者仅仅引入必须使用的方法。</p>
+</blockquote>
+<h4 id="default-exports"><a class="header-anchor" href="#default-exports">¶</a>Default exports</h4>
+<p>除了命名的输出，ES6同样允许模块有其默认export。我们总有要引入整个库的场景，尤其是在使用像jQuery,Underscore,Backbone或其他规模较大的库的时候默认输出就很有用。一个模块只能定义一个默认输出，就像这样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">export default function(x) &#123;</div><div class="line">  return x + x;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>引入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import double from &apos;mymodule&apos;;</div><div class="line">double(2); // 4</div></pre></td></tr></table></figure>
+<p>这里没有使用大括号包裹引入模块的名字。默认exports是没有命名的，所以你能import他们并以任何你想要的名字命名。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import christmas from &apos;mymodule&apos;;</div><div class="line">christmas(2); // 4</div></pre></td></tr></table></figure>
+<p>一个模块可以既有默认的export，又有命名的export，只要你愿意，但这种用法并不常见。</p>
+<blockquote>
+<p>ES6模块规范的设计目标之一是希望是使用者更多地使用默认模块输出。</p>
+</blockquote>
+<p>译者注：这里有<a href="https://esdiscuss.org/topic/moduleimport#content-0" target="_blank" rel="external">非常细节的讨论</a>。
+这个讨论说了这么多其实就是在说：如果你更偏向于对exports命名，没有问题，不需要改变习惯去迎合ES6的细则。</p>
+<h3 id="programmatic-api"><a class="header-anchor" href="#programmatic-api">¶</a>Programmatic API</h3>
+<p>除了以上新语法，还有新的API进入语言特性，所以你能以编程的方式引入模块。虽然很少用到，但仍然有必要举一个例子：根据具体条件的判断才加载模块的情形。这个例子的意思是：如果你的浏览器不支持某个特性，你可以这样做。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if(someFeatureNotSupported) &#123;</div><div class="line">  System.import(&apos;my-polyfill&apos;).then(function(myPolyFill) &#123;</div><div class="line">    // use the module from here</div><div class="line">  &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>System.import</code>提供勾子，允许使用者在一个模块生命周期的某个时间点上注册并运行回调。有关勾子的语法还没有最终确定，但是一旦定稿一定会起巨大的作用。新API开启了许多可能性，试想一下，你可以利用勾子写一些代码在引入每个模块前运行一些像JSHint的东西。你不必在命令行上起一个watch任务来监控代码了，这不失为一种保证代码质量的新方法。</p>
+<h3 id="在浏览器还不支持的情况下怎么使用呢？"><a class="header-anchor" href="#在浏览器还不支持的情况下怎么使用呢？">¶</a>在浏览器还不支持的情况下怎么使用呢？</h3>
+<p>这些新东西有非常好的使用前景，但遗憾的是现在还没有一个浏览器完全支持，可能过不了多久情况会发生改变，而现在可以使用以下工具支持。</p>
+<h4 id="es6-module-transpiler"><a class="header-anchor" href="#es6-module-transpiler">¶</a>ES6 module transpiler</h4>
+<p>现有的一个解决方案是使用<a href="https://github.com/esnext/es6-module-transpiler" target="_blank" rel="external">ES6 module transpiler</a>， 一个可以让你使用ES6模块语法的写Javascript的编译器，编译器将源代码编译成CommonJS风格的代码，或者AMD风格的代码。<a href="https://github.com/esnext/es6-module-transpiler#build-tools" target="_blank" rel="external">编译器也有插件提供</a>，支持各种构建工具如Grunt，Gulp。
+使用编译器的优势在于，如果你已经使用了像RequireJS或Browserify的工具，你能立即切换到编译器开始使用ES6的原生语法并且不必担心新代码在浏览其中不运行。如果你本来就没有使用模块加载器，编译器也不会使代码产生变化。所以，ES6模块编译器做的只是把ES6模块代码转变成CommonJS或AMD风格的代码，除此之外不做其他转换，如果在你的工作流程中还没有这一环，使用它绝对是个很棒的选择。</p>
+<h4 id="systemjs"><a class="header-anchor" href="#systemjs">¶</a>SystemJS</h4>
+<p>另一个方案是使用<a href="https://github.com/systemjs/systemjs" target="_blank" rel="external">SystemJS</a>。我认为这是最好的解决方案。SystemJS是一个通用的模块加载器：它能载入ES6模块，AMD模块，CommonJS模块，以及作为全局变量加入的模块。
+SystemJS能做到这些，有赖于另外两个库，<a href="https://github.com/ModuleLoader/es6-module-loader/tree/v0.9.4" target="_blank" rel="external">ES6 module loader polyfill</a> 和 <a href="https://github.com/google/traceur-compiler/" target="_blank" rel="external">Traceur</a>。可以选择通过bower安装<a href="https://github.com/jmcriffey/bower-traceur" target="_blank" rel="external">bower-traceur</a>，实在没必要花时间寻找Traceur的可下载版本。ES6 module loader polyfill实现了<code>System.import</code>。Traceur是一个ES6-to-ES5的模块加载器，Traceur把ES6代码转换为ES5代码，ES5标准是已经被大部分浏览器所支持的。利用Traceur的优势是即使在浏览器还是各种不支持的环境下你也能使用ES6的各种新特性。缺点是每次修改代码你都必须编译一遍。当然，SystemJS会自动帮你做这些事情。
+你要做的仅仅是在web应用内使用<code>&lt;script&gt;</code>标签来引入SystemJS。它会自动载入ES6 module loader 和Traceur。在HTML内使用<code>System.import</code>来载入模块。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">  System.import(&apos;./app&apos;);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>当你载入页面，app.js会被异步载入。在app.js内可以使用ES6模块，SystemJS会检测到那是一个ES6文件，然后自动载入Traceur来编译。使用SystemJS模块化编程的时候，一个比较好的做法是有建立一个主模块（上例中的app.js）作为应用的入口，app.js文件负责载入应用的所有模块，通过只载入一个”初始化&quot;文件来管理你的应用，剩下的就交给这个文件来做了。
+SystemJS也提供<a href="https://github.com/systemjs/systemjs#es6-systemregister-compilation" target="_blank" rel="external">工具</a>把应用合并到一个文件。</p>
+<h3 id="总结"><a class="header-anchor" href="#总结">¶</a>总结</h3>
+<p>ES6模块距离我们至少还有六个月至一年，但那不意味着现在我们用不了。虽然使用起来还有掣肘——需要使用SystemJS或其他方案，这并不意味着不值得我们这么做。在浏览器使用任何其他的模块系统：RequireJS、Browserify还是其他方案也都要引入额外的工具和库来支持。你以为我在说SystemJS和其他工具比起来没啥优势？too naive, 如果哪天ES6模块语法终于被浏览器支持了，你只需要移除SystemJS然后一切都像以前一样工作，所以其实我就是在说无缝升级。
+所以如果你打算开始一个新的工程，我非常推荐使用ES6模块。因为这个已经定稿的语法已经是跑不掉的了，迟早会被浏览器支持，现在就使用新语法比以后再换过来代价可小得多。</p>
+<h3 id="英文原文地址"><a class="header-anchor" href="#英文原文地址">¶</a>英文原文地址</h3>
+<p>花了两个上午终于翻译完成和理通词句，也谢谢你读到这里
+<a href="http://24ways.org/2014/javascript-modules-the-es6-way/" target="_blank" rel="external">http://24ways.org/2014/javascript-modules-the-es6-way/</a></p>
+
+  </section>
+
+  
+  
+
+  <div id="commentcontainer"></div>
+  <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <script>
+  var gitment = new Gitment({
+    id: window.hexoPageTitle, // 可选。默认为 location.href
+    owner: 'Colin6618',
+    repo: 'bloggitment',
+    oauth: {
+      client_id: '7d308904155b6fd7a3b4',
+      client_secret: '1682df4a07a1b324afbb93fdde3dfdb872872317',
+    },
+  })
+  gitment.render('commentcontainer')
+  </script>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno" rel="external nofollow">Huno</a></span>
+
+</footer>
+
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+
+
+    
+
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            MathJax.Hub.Config({
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]}
+            });
+        });
+    </script>
+
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
