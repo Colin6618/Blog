@@ -1,7 +1,7 @@
 ---
 title: 用ECMAScript6的方式写Javascript模块
 date:  2014-12-04 16:58:43
-tags:
+tags:  javascript
 ---
 
 ## 用ECMAScript6的方式写Javascript模块

@@ -1,7 +1,7 @@
 ---
-title: sizeof偶遇指针和数组
+title: sizeof 偶遇指针和数组
 date: 2013-09-02 22:40:32
-tags:
+tags: C 编程
 ---
 
 > 记录几个我觉得很有意思的题目，先看这个函数
@@ -10,24 +10,26 @@ tags:
 #include "stdafx.h"
 #include <iostream>
 using namespace std;
+
 void UpperCase( char str[] ) // 将 str 中的小写字母转换成大写字母
 {
-for( size_t i=0; i<strlen(str);i++)
-{
-if( 'a'<=str[i] && str[i]<='z' )
-str[i] -= ('a'-'A' );
-}
+  for( size_t i=0; i<strlen(str);i++)
+  {
+    if( 'a'<=str[i] && str[i]<='z' )
+      str[i] -= ('a'-'A' );
+  }
 }
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-char str[] = "aBcDe";
-cout << "str字符长度为: " << sizeof(str) << endl << sizeof(str[0]) << endl;
-UpperCase( str );
-cout << str << endl;
-system("pause");
-return 0;
+  char str[] = "aBcDe";
+  cout << "str字符长度为: " << sizeof(str) << endl << sizeof(str[0]) << endl;
+  UpperCase( str );
+  cout << str << endl;
+  system("pause");
+  return 0;
 }
+
 ```
 
 函数内的sizeof有问题。根据语法，sizeof如用于数组，只能测出静态数组的大小，因为其在编译时确定，无法检测动态分配的或外部数组大小，
@@ -47,15 +49,16 @@ ABCDE
 再看这段
 ```c
 char arr[10] = "What?";
-              int len_one = strlen(arr);
-              int len_two = sizeof(arr);
-              cout << len_one << " and " << len_two << endl;
-一个区别：sizeof返回定义arr数组时，编译器为其分配的数组空间大小，不关心里面存了多少数据。strlen只关心存储的数据内容，不关心空间的大小和类型。
+int len_one = strlen(arr);
+int len_two = sizeof(arr);
+cout << len_one << " and " << len_two << endl;
+//一个区别：sizeof返回定义arr数组时，编译器为其分配的数组空间大小，不关心里面存了多少数据。strlen只关心存储的数据内容，不关心空间的大小和类型。
 char * parr = new char[10];
-              int len_one = strlen(parr);
-              int len_two = sizeof(parr);
-              int len_three = sizeof(*parr);
-              cout << len_one << " and " << len_two << " and " << len_three << endl;
+int len_one = strlen(parr);
+int len_two = sizeof(parr);
+int len_three = sizeof(*parr);
+cout << len_one << " and " << len_two << " and " << len_three << endl;
+
 ```
     输出结果：23 and 4 and 1
     点评：第一个输出结果23实际上每次运行可能不一样，这取决于parr里面存了什么（从parr[0]开始知道遇到第一个NULL结束）；第二个结果实际上本意是想计算parr所指向的动态内存空间

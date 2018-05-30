@@ -4,6 +4,10 @@ date: 2015-05-07 17:36:52
 tags: H5 适配 无线
 ---
 
+
+[本文已授权发表于淘宝前端团队博客](http://www.taobaofed.org/blog/2015/10/28/auto-layout-in-h5-project/)
+
+
 ![h5](http://gtms02.alicdn.com/tps/i2/TB15IMmKXXXXXXzXpXX2AXZ8pXX-900-500.png)
 
 
@@ -237,6 +241,3 @@ $('html').attr('style', 'font-size: ' + window.rem + 'px !important');
 毕竟雷布斯都开口讲英文了，我们为什么不能改变呢？
 
 
-====
-
-[本文已发表于淘宝前端团队博客](http://www.taobaofed.org/blog/2015/10/28/auto-layout-in-h5-project/)

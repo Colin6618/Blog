@@ -1,8 +1,10 @@
 ---
 title: 折腾你的笔记本让手机和Pad都能上网
 date: 2013-10-26 18:40:17
-tags:
+tags: 大学
 ---
+
+### 寝室热点
 
 首先笔记本都有两个网卡，一个无线的，一个有线的。
 
@@ -13,14 +15,15 @@ tags:
 步骤:
 - 打开CMD(只限于windows)。输入如下命令
 在cmd下输入
-```
-netsh wlan set hostednetwork mode=allow ssid=open
- key=12345678
+
+``` dat
+netsh wlan set hostednetwork mode=allow ssid=open key=12345678
 ```
 这样就设置好了，网络名称是open,密码是12345678
 然后开启这个热点就行了。
 输入
-```
+
+```data
 netsh wlan start hostednetwork
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: 记vps上搭建SS以及对DevOps的思考
+title: 记 VPS 上搭建 SS 以及对 DevOps 的思考
 date: 2016-07-19 17:58:56
 tags: 运维 博客
 ---
