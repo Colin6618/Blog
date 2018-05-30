@@ -8,7 +8,8 @@
   "scripts": {
     "start": "hexo clean && hexo generate && hexo server",
     "generate": "hexo clean && hexo generate",
-    "dev": "hexo clean && hexo generate && hexo server"
+    "dev": "hexo clean && hexo generate && hexo server",
+    "deploy": "hexo clean && hexo generate && hexo deploy"
   },
   "dependencies": {
     "gitment": "0.0.3",
