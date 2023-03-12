@@ -6,7 +6,7 @@ tags: life
 
 ### I returned to Tokyo today
 
-I returned to Tokyo today and back to the apartment where I hadn't lived in months. Today's dinner was barren, consisting only of boiled frozen dumplings, dumpling soup, and boiled carrots with no side dishes. I opened the fridge several times, but there was nothing fresh inside. As I didn't have time, I ended up taking a hot sauce that had been opened for a few months to go with my rice, but it was too spicy. So, I had to sprinkle some dried nuts and raisins from the supermarket over the rice.
+I returned to Tokyo today and back to the apartment where I hadn't lived in months. Today's dinner was barren, consisting only of boiled frozen dumplings, dumpling soup, and boiled carrots with no side dishes. I opened the fridge several times, but there was nothing fresh inside. As I didn't have time, I ended up taking a hot sauce that had been opened for a few months to go with my rice, but it was too spicy. I had to sprinkle some dried nuts and raisins on the rice that I brought back from the airport.
 
 ### Cabbage and Engineer
 
