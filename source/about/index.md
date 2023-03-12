@@ -12,7 +12,7 @@ To see a world in a wild flower, and a bodhi in a leaf.
 
 Welcome to my blog.
 
-My name is Colin, and I am a software engineer who graduated from Nanjing University.
+My name is Colin Han, and I am a software engineer who graduated from Nanjing University.
 
 Before 2019, I lived in Hangzhou, Zhejiang Province, near the Xixi National Wetland Park. There was traffic congestion there every morning. Hangzhou's real estate market has developed rapidly, and it is no longer considered an ordinary suburb, but rather a suburb with highways.
 
