@@ -2,44 +2,90 @@
 title: About
 ---
 
- 一花一世界 一次吃一片
+To see a world in a wild flower, and a bodhi in a leaf.
 
------------
+一花一世界
+
+---
+
+### About
+
+Welcome to my blog.
+
+My name is Colin, and I am a software engineer who graduated from Nanjing University.
+
+Before 2019, I lived in Hangzhou, Zhejiang Province, near the Xixi National Wetland Park. There was traffic congestion there every morning. Hangzhou's real estate market has developed rapidly, and it is no longer considered an ordinary suburb, but rather a suburb with highways.
+
+I used to work for Alibaba Group and SoftBank Group, and now I live and work in Tokyo, Japan.
+
+I have several nicknames, my friends call me Zhi Zhi, Master, and Big Buffalo.
+
+I have a fear of heights, but as I have grown older, it seems to have become less severe.
+
+Basketball is my favorite sport. In the year I started working, I used to play basketball with my friends often. Later, one by one, my friends stopped playing basketball and exercising because they were in relationships, which made me feel frustrated. I had no choice but to join them.
+
+I also work at Meizu Technology, a leading smartphone design and manufacturer located on Wantang Road in Hangzhou.
+
+At Meizu, I lead the e-commerce front-end team, called the undefined team. Our team works on web front-end development, as well as some client development, and we also use Node.js for full-stack system development.
+
+I have always advocated for an open and transparent team atmosphere, where anyone can express their views and make changes to existing projects, provided they can clearly articulate their opinions and persuade others.
+
+I like some old things. Even though the company I work for designs smartphones, I still like Nokia phones with physical buttons and full-keyboard phones from many years ago.
+
+In recent years, I have been to Tokyo and occasionally the United States. During these years, I have worked and traveled in Japan, deeply experiencing Japanese culture, and also meeting many interesting and friendly colleagues and friends from all over the world.
+
+I do not use Weibo much and use Twitter more on social media platforms.
+
+Feel free to contact me.
 
 ### 关于
 
-> 毕业于南京大学软件学院，然后就职于淘宝前端团队，花名愈之，~~现居于浙江杭州的大余杭CBD，就是那个西溪湿地边上的每天早上堵车的荒郊野岭。~~ 杭州房地产发展太快，现在已经不能算荒郊野岭了，可以形容是马路很宽的郊区吧。
+欢迎来到我的博客。
 
-昵称有过之之、教主、大水牛、江南苗条傲娇受等。
+我叫 Colin，我是一名软件工程师，毕业于南京大学。
 
-工作以后发现自己有轻微的恐高症，并随着体重逐渐增加未见痊愈。
+2019 年前我居住于浙江杭州，住在杭州西溪湿地附近，那里每天早上都会堵车。杭州房地产市场发展很快快，那里现在已经不能算是普通的郊区了，变成了有高速公路的郊区。
 
-热爱篮球，篮球是项团体运动，但是身边的球友为了快速晋升或陪伴异性都逐渐放弃下班后运动。
+我曾经就职于阿里巴巴集团和软银集团，现在居住在日本东京，在东京工作，
 
-无奈之下，我也加入了他们。
+我有多个昵称，我的朋友叫我之之、教主、大水牛。
 
-现在在魅族科技工作，地点在杭州西湖区万塘路，支付宝在万塘路的这头，魅族杭州在万塘路的那一头。
+我有恐高症，但随着年龄的增长似乎变得不那么严重了。
 
-我在这边带电商前端团队，暂时叫 undefined 小队吧，属于 UED 部门。
+篮球是我最喜欢的运动，开始工作的那年，我经常和朋友们打篮球。后来朋友们为了谈恋爱，一个个都不再打篮球，不再运动，我感到沮丧。没办法，后来我也加入了他们的行列。
 
-我们既做 web 前端，也用 RN 做客户端，也用 Node.js 系统和平台。
+我也在魅族科技工作，一个领先的智能手机的设计和制造商，地点在杭州的万塘路。
 
-我一直倡导开放透明的团队氛围，任何人都可以对现有的项目提出看法和实施改变，前提是要能够阐述观点和说服别人。
+我在魅族带领电商前端团队，我的团队叫做 undefined team。我们团队负责魅族电商的所有 web 系统，我们使用 Node.js 做系统的全栈开发，同时我们也做一些客户端开发。
 
-魅族是个惟精惟一地做作手机公司，所以我可以经常换手机使用。在苹果带领全面屏的潮流下，我依然喜欢有实体按键的手机和全键盘的手机。
+我一直倡导开放透明的团队文化，任何人都可以对现有的项目提出看法和实施改变，前提是能够清楚地阐述观点和说服其他人。
 
-社交工具上，我基本不上微博，用推特较多，欢迎关注我。
+我喜欢一些旧东西。即便我工作的公司是设计智能手机的公司，我依然喜欢有实体按键的诺基亚手机和多年以前的全键盘的手机。
 
-附上16年的照片
+最近几年我在东京，偶尔去美国。这几年我在日本工作和旅行，深度体验了日本的文化，也认识了不少来自世界各地同事和朋友，他们非常有趣和友善。
+
+社交工具上，我不用微博，用推特较多。
+
+欢迎与我联系。
+
+16 年的照片
 
 ![16年的我](https://img.alicdn.com/tps/TB1SED9NVXXXXcMXpXXXXXXXXXX-734-979.jpg_300x300.jpg)
 
-- [微博](http://weibo.com/u/1168558774?is_all=1)
-- [twitter](https://twitter.com/CasualPS)
+---
 
------------
+### Copyright statement
+
+This site is available under Attribution 4.0 International - CC BY 4.0 - Creative Commons.
+
+Original content is welcome to be reprinted in all forms on this site unless stated separately within the body of the article.
+
+In order not to cause distress or mislead readers, please retain the last source of the article when reprinting, as articles will be edited from time to time for timeliness reasons.
+
+For cost reasons, this site may occasionally experience high delays.
 
 ### 版权说明
+
 本站采用[「署名 4.0 国际（CC BY 4.0）」](http://creativecommons.org/licenses/by/4.0/deed.zh)创作共享协议。通俗地讲，只要在使用时署名，那么使用者可以对本站所有原创内容进行转载、节选、混编、二次创作，允许商业性使用。
 
 ![cc](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGkAAAAyCAIAAADQqWJZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpBODU1OTRERDFEQTYxMUU2OTNBNjhGODU5RTQxNjQwMCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpBODU1OTRERTFEQTYxMUU2OTNBNjhGODU5RTQxNjQwMCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkE4NTU5NERCMURBNjExRTY5M0E2OEY4NTlFNDE2NDAwIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkE4NTU5NERDMURBNjExRTY5M0E2OEY4NTlFNDE2NDAwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+hlc92AAADWhJREFUeNrEW2VQ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)
@@ -50,12 +96,6 @@ title: About
 
 本站翻译的文章（标题以【译】开头，标签包含【翻译】）来源为众成翻译，采用继承自众成翻译平台的授权协议，转载请在文章中保留众成翻译的原文链接。
 
-出于成本考虑，本站架设在国外服务器，偶尔会出现延迟较高的现象。
+出于成本考虑，偶尔会出现延迟较高的现象。
 
-
----------
-
-WeChat QRCode
-
-![wechat](https://img.alicdn.com/tps/TB1JRbHNVXXXXajapXXXXXXXXXX-512-510.png_250x250.jpg)
-
+---
